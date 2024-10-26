@@ -7,7 +7,6 @@ import {
   ListItemText,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
-import style from "./Header.module.css";
 
 interface MobileHeaderProps {
   handleDrawerToggle: () => void;
