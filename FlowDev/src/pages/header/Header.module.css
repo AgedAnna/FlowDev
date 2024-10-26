@@ -1,0 +1,10 @@
+.toolbar {
+  background-color: #160d18 !important;
+}
+
+.buttonHeader:hover {
+  color: #1ca39e;
+  border-bottom: 2px solid #1ca39e;
+  padding-bottom: 2px;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+}
