@@ -6,7 +6,7 @@
 
   height: 100vh;
 
-  background-color: #01002b;
+  background-color: #ffffff;
 
   overflow: hidden;
   position: relative;
@@ -18,13 +18,4 @@
   position: relative;
   z-index: 1;
   width: 450px;
-}
-
-.title {
-  color: aliceblue;
-
-  font-size: 90px;
-  font-weight: 600;
-
-  font-family: "Poppins", sans-serif;
 }

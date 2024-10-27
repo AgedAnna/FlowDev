@@ -22,7 +22,7 @@ const MobileHeader: React.FC<MobileHeaderProps> = ({
   return (
     <>
       <IconButton color="inherit" edge="start" onClick={handleDrawerToggle}>
-        <MenuIcon />
+        <MenuIcon style={{color: "#3200FF"}} />
       </IconButton>
       <Drawer anchor="right" open={drawerOpen} onClose={handleDrawerToggle} sx={{ "& .MuiDrawer-paper": { width: "35vw" } }}>
         <List>

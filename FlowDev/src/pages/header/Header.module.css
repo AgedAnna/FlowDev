@@ -1,10 +1,30 @@
 .toolbar {
-  background-color: #160d18 !important;
+  background-color: #ffffff !important;
+}
+
+.buttonHeader {
+  color: black !important;
+  font-family: "Jost", sans-serif !important;
 }
 
 .buttonHeader:hover {
-  color: #1ca39e;
-  border-bottom: 2px solid #1ca39e;
-  padding-bottom: 2px;
+  color: #3a00ff !important;
   transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.button {
+  background-color: #3a00ff !important;
+  color: #fff;
+  padding: 10px 20px;
+  font-family: "Jost", sans-serif !important;
+  font-size: 1rem;
+  border: none;
+  border-radius: 12px !important;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-bottom 0.3s ease;
+  margin-top: 20px;
+}
+
+.button:hover {
+  background-color: #5e3bee !important;
 }

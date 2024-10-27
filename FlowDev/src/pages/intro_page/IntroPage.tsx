@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import astronot from "../../assets/Astronot.gif";
+import astronot from "../../assets/flowdev.svg";
 import style from "./IntroPage.module.css";
 import { useNavigate } from "react-router-dom";
 import { Row } from "antd";
@@ -18,12 +18,9 @@ const IntroPage: React.FC = () => {
 
   return (
     <div className={style.intropage}>
-      {/* Astronaut GIF */}
       <Row>
         <img src={astronot} alt="Astronaut" className={style.astronot} />
       </Row>
-      <div></div>
-      <Row className={style.title}>Flow Dev</Row>
     </div>
   );
 };
