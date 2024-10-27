@@ -1,21 +1,23 @@
 .intropage {
   display: flex;
-
+  background-image: url("../../assets/fundohome.png");
   justify-content: center;
   align-items: center;
-
   height: 100vh;
-
   background-color: #ffffff;
-
   overflow: hidden;
   position: relative;
-
   flex-direction: column;
 }
 
 .astronot {
-  position: relative;
-  z-index: 1;
-  width: 450px;
+  width: 80%;
+  max-width: 300px;
+}
+
+@media (max-width: 600px) {
+  .astronot {
+    width: 60%;
+    max-width: 200px;
+  }
 }

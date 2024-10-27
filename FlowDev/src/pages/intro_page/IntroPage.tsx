@@ -2,7 +2,6 @@ import { useEffect } from "react";
 import astronot from "../../assets/flowdev.svg";
 import style from "./IntroPage.module.css";
 import { useNavigate } from "react-router-dom";
-import { Row } from "antd";
 
 const IntroPage: React.FC = () => {
   const navigate = useNavigate();
@@ -18,9 +17,7 @@ const IntroPage: React.FC = () => {
 
   return (
     <div className={style.intropage}>
-      <Row>
-        <img src={astronot} alt="Astronaut" className={style.astronot} />
-      </Row>
+      <img src={astronot} alt="Astronaut" className={style.astronot} />
     </div>
   );
 };
