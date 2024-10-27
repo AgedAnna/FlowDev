@@ -8,45 +8,6 @@ import {
   CardContent,
 } from "@mui/material";
 
-import { makeStyles } from '@mui/styles';
-
-// Estilos personalizados
-const useStyles = makeStyles({
-  root: {
-    backgroundColor: "hsl(216, 33%, 97%)",
-    padding: "40px 0",
-  },
-  logoContainer: {
-    display: "flex",
-    justifyContent: "space-around",
-    alignItems: "center",
-    paddingBottom: "40px",
-  },
-  logo: {
-    width: 80,
-    height: "auto",
-  },
-  card: {
-    textAlign: "center",
-    padding: "20px",
-    borderRadius: "8px",
-    boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.1)",
-  },
-  cardIcon: {
-    fontSize: "2rem",
-    color: "#6BBE92",
-  },
-  cardTitle: {
-    fontWeight: "bold",
-    fontSize: "1.25rem",
-    marginTop: "10px",
-  },
-  cardDescription: {
-    fontSize: "0.9rem",
-    color: "gray",
-  },
-});
-
 const Clientes: React.FC = () => {
   return (
     <Box sx={{ backgroundColor: "hsl(216, 33%, 97%)", padding: "40px 0" }}>
