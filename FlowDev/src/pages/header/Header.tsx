@@ -3,7 +3,6 @@ import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import Button from "@mui/material/Button";
 import { Container } from "@mui/material";
-import { useNavigate } from "react-router-dom";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@mui/material/styles";
 import MobileHeader from "./MobileHeader";
@@ -11,7 +10,6 @@ import logo from "../../assets/flowdev.svg";
 import style from "./Header.module.css";
 
 const Header: React.FC = () => {
-  const navigate = useNavigate();
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -20,8 +18,11 @@ const Header: React.FC = () => {
     setDrawerOpen(!drawerOpen);
   };
 
-  const handleNavigation = (path: string) => {
-    navigate(path);
+  const handleScroll = (sectionId: string) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
     setDrawerOpen(false);
   };
 
@@ -49,7 +50,7 @@ const Header: React.FC = () => {
               >
                 <Button
                   color="inherit"
-                  onClick={() => navigate("/landing")}
+                  onClick={() => handleScroll("home")}
                   sx={{ textTransform: "none" }}
                   className={style.buttonHeader}
                 >
@@ -57,7 +58,7 @@ const Header: React.FC = () => {
                 </Button>
                 <Button
                   color="inherit"
-                  onClick={() => navigate("/sobre")}
+                  onClick={() => handleScroll("about")}
                   sx={{ textTransform: "none" }}
                   className={style.buttonHeader}
                 >
@@ -65,7 +66,7 @@ const Header: React.FC = () => {
                 </Button>
                 <Button
                   color="inherit"
-                  onClick={() => navigate("/clientes")}
+                  onClick={() => handleScroll("portfolio")}
                   sx={{ textTransform: "none" }}
                   className={style.buttonHeader}
                 >
@@ -73,7 +74,7 @@ const Header: React.FC = () => {
                 </Button>
                 <Button
                   color="inherit"
-                  onClick={() => navigate("/equipe")}
+                  onClick={() => handleScroll("services")}
                   sx={{ textTransform: "none" }}
                   className={style.buttonHeader}
                 >
@@ -94,7 +95,7 @@ const Header: React.FC = () => {
             <MobileHeader
               handleDrawerToggle={handleDrawerToggle}
               drawerOpen={drawerOpen}
-              handleNavigation={handleNavigation}
+              handleNavigation={handleScroll}
             />
           )}
         </Toolbar>

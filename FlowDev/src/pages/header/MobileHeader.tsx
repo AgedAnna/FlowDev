@@ -11,7 +11,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 interface MobileHeaderProps {
   handleDrawerToggle: () => void;
   drawerOpen: boolean;
-  handleNavigation: (path: string) => void;
+  handleNavigation: (sectionId: string) => void;
 }
 
 const MobileHeader: React.FC<MobileHeaderProps> = ({
@@ -22,33 +22,38 @@ const MobileHeader: React.FC<MobileHeaderProps> = ({
   return (
     <>
       <IconButton color="inherit" edge="start" onClick={handleDrawerToggle}>
-        <MenuIcon style={{color: "#3200FF"}} />
+        <MenuIcon style={{ color: "#3200FF" }} />
       </IconButton>
-      <Drawer anchor="right" open={drawerOpen} onClose={handleDrawerToggle} sx={{ "& .MuiDrawer-paper": { width: "35vw" } }}>
+      <Drawer
+        anchor="right"
+        open={drawerOpen}
+        onClose={handleDrawerToggle}
+        sx={{ "& .MuiDrawer-paper": { width: "35vw" } }}
+      >
         <List>
           <ListItem disablePadding>
-            <ListItemButton onClick={() => handleNavigation("/landing")}>
-              <ListItemText primary="Início" />
+            <ListItemButton onClick={() => handleNavigation("home")}>
+              <ListItemText primary="Home" />
             </ListItemButton>
           </ListItem>
           <ListItem disablePadding>
-            <ListItemButton onClick={() => handleNavigation("/sobre")}>
-              <ListItemText primary="Sobre Nós" />
+            <ListItemButton onClick={() => handleNavigation("about")}>
+              <ListItemText primary="About" />
             </ListItemButton>
           </ListItem>
           <ListItem disablePadding>
-            <ListItemButton onClick={() => handleNavigation("/clientes")}>
-              <ListItemText primary="Clientes" />
+            <ListItemButton onClick={() => handleNavigation("portfolio")}>
+              <ListItemText primary="Portfolio" />
             </ListItemButton>
           </ListItem>
           <ListItem disablePadding>
-            <ListItemButton onClick={() => handleNavigation("/equipe")}>
-              <ListItemText primary="Equipe" />
+            <ListItemButton onClick={() => handleNavigation("services")}>
+              <ListItemText primary="Services" />
             </ListItemButton>
           </ListItem>
           <ListItem disablePadding>
-            <ListItemButton onClick={() => handleNavigation("/contato")}>
-              <ListItemText primary="Contato" />
+            <ListItemButton onClick={() => handleNavigation("contact")}>
+              <ListItemText primary="Contact" />
             </ListItemButton>
           </ListItem>
         </List>
