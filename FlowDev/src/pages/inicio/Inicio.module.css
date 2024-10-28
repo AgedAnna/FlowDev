@@ -76,3 +76,15 @@
   max-width: 300px;
   height: auto;
 }
+
+@media (max-width: 768px) {
+  .imageSection img {
+    max-width: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .imageSection img {
+    max-width: 150px;
+  }
+}
