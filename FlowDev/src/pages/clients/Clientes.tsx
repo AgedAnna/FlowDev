@@ -3,145 +3,139 @@ import {
   Box,
   Container,
   Typography,
-  Grid,
   Card,
   CardContent,
+  Avatar,
+  Rating,
 } from "@mui/material";
+import Slider from "react-slick";
+import { testimonials } from "./utils";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import style from "./Clientes.module.css";
 
 const Clientes: React.FC = () => {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    responsive: [
+      {
+        breakpoint: 960,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  };
+
   return (
-    <Box sx={{ backgroundColor: "hsl(216, 33%, 97%)", padding: "40px 0" }}>
+    <Box
+      sx={{
+        backgroundColor: "hsl(216, 33%, 97%)",
+        padding: { xs: "20px 0", sm: "40px 0" },
+        marginBottom: "3px",
+        fontFamily: "Jost, sans-serif",
+      }}
+    >
       <Container maxWidth="lg">
-        {/* Seção de Logos */}
+        <Box
+          display="flex"
+          justifyContent="flex-start"
+          alignItems="center"
+          mb={4}
+          px={{ xs: 2, sm: 0 }}
+        >
+          <Box textAlign="left">
+            <Typography variant="h4" gutterBottom>
+              Customer Testimonials
+            </Typography>
+            <Typography
+              variant="subtitle1"
+              color="textSecondary"
+              className={style.card}
+            >
+              Clients Feedback
+            </Typography>
+          </Box>
+        </Box>
         <Box
           sx={{
-            display: "flex",
-            justifyContent: "space-around",
-            alignItems: "center",
-            paddingBottom: "40px",
+            width: "100%",
+            overflow: "hidden",
+            margin: "0",
+            padding: { xs: "0 8px", sm: "0 10px" },
           }}
         >
-          <img
-            src=""
-            alt="Cliente 1"
-            style={{ width: 80, height: "auto" }}
-          />
-          <img
-            src=""
-            alt="Cliente 2"
-            style={{ width: 80, height: "auto" }}
-          />
-          <img
-            src=""
-            alt="Cliente 3"
-            style={{ width: 80, height: "auto" }}
-          />
-          <img
-            src=""
-            alt="Cliente 4"
-            style={{ width: 80, height: "auto" }}
-          />
-          <img
-            src=""
-            alt="Cliente 5"
-            style={{ width: 80, height: "auto" }}
-          />
+          <Slider {...settings}>
+            {testimonials.map((testimonial, index) => (
+              <Box key={index} sx={{ padding: { xs: "0", sm: "0 10px" } }}>
+                <Card
+                  sx={{
+                    padding: "20px",
+                    borderRadius: "8px",
+                    boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.1)",
+                    backgroundColor: "white",
+                    textAlign: "left",
+                    minHeight: "300px",
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "space-between",
+                  }}
+                >
+                  <CardContent>
+                    <Rating
+                      value={testimonial.rating}
+                      readOnly
+                      sx={{ color: "#FFD700" }}
+                    />
+                    <Typography
+                      variant="body1"
+                      color="textSecondary"
+                      sx={{ margin: "20px 0" }}
+                      className={style.card}
+                    >
+                      "{testimonial.description}"
+                    </Typography>
+                    <Box display="flex" alignItems="center">
+                      <Avatar
+                        alt={testimonial.name}
+                        src={testimonial.avatar}
+                        sx={{ marginRight: "10px" }}
+                      />
+                      <Box>
+                        <Typography
+                          variant="subtitle1"
+                          sx={{ fontWeight: "bold" }}
+                          className={style.card}
+                        >
+                          {testimonial.name}
+                        </Typography>
+                        <Typography
+                          variant="body2"
+                          color="textSecondary"
+                          className={style.card}
+                        >
+                          {testimonial.company}
+                        </Typography>
+                      </Box>
+                    </Box>
+                  </CardContent>
+                </Card>
+              </Box>
+            ))}
+          </Slider>
         </Box>
-
-        {/* Título e Descrição */}
-        <Typography variant="h4" align="center" gutterBottom>
-          Nossos Clientes
-        </Typography>
-        <Typography
-          variant="subtitle1"
-          align="center"
-          color="textSecondary"
-          paragraph
-        >
-          Temos trabalhado com algumas das principais empresas do mercado.
-        </Typography>
-
-        {/* Cards de Informações */}
-        <Grid container spacing={4} justifyContent="center">
-          <Grid item xs={12} sm={6} md={4}>
-            <Card
-              sx={{
-                textAlign: "center",
-                padding: "20px",
-                borderRadius: "8px",
-                boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.1)",
-              }}
-            >
-              <CardContent>
-                <Typography sx={{ fontSize: "2rem", color: "#6BBE92" }}>
-                  👥
-                </Typography>
-                <Typography
-                  variant="h6"
-                  sx={{ fontWeight: "bold", marginTop: "10px" }}
-                >
-                  Organizações de Membros
-                </Typography>
-                <Typography sx={{ fontSize: "0.9rem", color: "gray" }}>
-                  Nosso software de gerenciamento de membros automatiza
-                  completamente as renovações e pagamentos de associações.
-                </Typography>
-              </CardContent>
-            </Card>
-          </Grid>
-          <Grid item xs={12} sm={6} md={4}>
-            <Card
-              sx={{
-                textAlign: "center",
-                padding: "20px",
-                borderRadius: "8px",
-                boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.1)",
-              }}
-            >
-              <CardContent>
-                <Typography sx={{ fontSize: "2rem", color: "#6BBE92" }}>
-                  🏢
-                </Typography>
-                <Typography
-                  variant="h6"
-                  sx={{ fontWeight: "bold", marginTop: "10px" }}
-                >
-                  Associações Nacionais
-                </Typography>
-                <Typography sx={{ fontSize: "0.9rem", color: "gray" }}>
-                  Oferecemos soluções completas para automatizar renovações e
-                  pagamentos para grandes associações.
-                </Typography>
-              </CardContent>
-            </Card>
-          </Grid>
-          <Grid item xs={12} sm={6} md={4}>
-            <Card
-              sx={{
-                textAlign: "center",
-                padding: "20px",
-                borderRadius: "8px",
-                boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.1)",
-              }}
-            >
-              <CardContent>
-                <Typography sx={{ fontSize: "2rem", color: "#6BBE92" }}>
-                  🤝
-                </Typography>
-                <Typography
-                  variant="h6"
-                  sx={{ fontWeight: "bold", marginTop: "10px" }}
-                >
-                  Clubes e Grupos
-                </Typography>
-                <Typography sx={{ fontSize: "0.9rem", color: "gray" }}>
-                  Facilite o gerenciamento e automação de pagamentos para clubes
-                  e grupos locais.
-                </Typography>
-              </CardContent>
-            </Card>
-          </Grid>
-        </Grid>
       </Container>
     </Box>
   );
