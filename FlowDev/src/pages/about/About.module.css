@@ -1,0 +1,105 @@
+.inicioContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #000;
+  text-align: left;
+  padding: 0 40px;
+  flex-wrap: wrap;
+}
+
+.textSection {
+  max-width: 600px;
+  margin: 20px;
+}
+
+.audiowide {
+  font-family: "Jost", sans-serif !important;
+  font-size: 1rem;
+  color: #282938;
+  margin-bottom: 5px;
+}
+
+.audiowidebig {
+  font-family: "Audiowide", sans-serif !important;
+
+  font-size: 3.5rem;
+  color: #282938;
+  margin: 10px 0;
+}
+
+.audiowidebigaE {
+  color: #5e3bee !important;
+}
+
+.flowDev {
+  font-family: "Audiowide", sans-serif !important;
+  font-weight: 600;
+  /* font-size: 1.5rem; */
+}
+
+.audiowidebigaEV,
+.audiowidebigaD {
+  font-family: "Jost", sans-serif !important;
+  font-size: 1.3rem;
+  color: #282938;
+}
+
+.imageSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imageSection img {
+  max-width: 500px;
+  height: auto;
+}
+
+@media (max-width: 774px) {
+  .imageSection img {
+    max-width: 300px;
+  }
+  .inicioContainer {
+    height: 100% !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .imageSection img {
+    max-width: 200px;
+  }
+  .inicioContainer {
+    height: 100% !important;
+  }
+}
+
+@media (max-width: 1037px) {
+  .audiowidebig {
+    font-size: 2.5rem;
+  }
+
+  .audiowidebigaEV,
+  .audiowidebigaD {
+    font-size: 1.1rem;
+  }
+
+  .inicioContainer {
+    height: 100% !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .audiowidebig {
+    font-size: 2rem;
+  }
+
+  .audiowidebigaEV,
+  .audiowidebigaD {
+    font-size: 1rem;
+  }
+}
