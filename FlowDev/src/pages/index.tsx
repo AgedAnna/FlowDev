@@ -4,6 +4,7 @@ import Clientes from "./clients/Clientes";
 import FooterPage from "./footer/FooterPage";
 import Header from "./header/Header";
 import Inicio from "./inicio/Inicio";
+import ServicesPage from "./servicos/ServicesPage";
 
 const LandingPage: React.FC = () => {
   return (
@@ -11,6 +12,9 @@ const LandingPage: React.FC = () => {
       <Header />
       <section id="home">
         <Inicio />
+      </section>
+      <section id="services">
+      <ServicesPage/>
       </section>
       <section id="about">
         <About />
