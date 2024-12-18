@@ -1,12 +1,5 @@
 import React from "react";
-import {
-  Box,
-  Typography,
-  Grid,
-  Link,
-  Container,
-  IconButton,
-} from "@mui/material";
+import { Box, Typography, Grid, Container, IconButton } from "@mui/material";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import TwitterIcon from "@mui/icons-material/Twitter";
@@ -89,9 +82,9 @@ const FooterPage: React.FC = () => {
             {[FacebookIcon, InstagramIcon, TwitterIcon, LinkedInIcon].map(
               (Icon, idx) => {
                 const urls = [
-                  "https://facebook.com", // Facebook
-                  "https://www.instagram.com/flowdev__/", // Instagram
-                  "https://twitter.com", // Twitter
+                  "https://www.instagram.com/flowdev__?igsh=MWFtanhvNGloYzIwaA==", // Facebook
+                  "https://www.instagram.com/flowdev__?igsh=MWFtanhvNGloYzIwaA==", // Instagram
+                  "https://www.linkedin.com/company/flow-dev-services/", // Twitter
                   "https://www.linkedin.com/company/flow-dev-services/", // LinkedIn
                 ];
 
@@ -131,7 +124,7 @@ const FooterPage: React.FC = () => {
               Made by @FlowDevelopment
             </Typography>
           </Grid>
-          <Grid
+          {/* <Grid
             item
             xs={12}
             md={4}
@@ -150,7 +143,7 @@ const FooterPage: React.FC = () => {
                 </Link>
               )
             )}
-          </Grid>
+          </Grid> */}
         </Grid>
       </Container>
     </Box>

@@ -1,4 +1,6 @@
 .inicioContainer {
+  background-color: #d7cdff;
+
   display: flex;
   justify-content: space-around;
   align-items: center;

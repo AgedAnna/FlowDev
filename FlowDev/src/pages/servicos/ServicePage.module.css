@@ -1,78 +1,76 @@
 body {
-    font-family: 'Jost', sans-serif  !important; /* Aplica Jost a toda a página */
+  font-family: "Jost", sans-serif !important;
 }
-
 
 .services-page {
-    background-color: #F5F7FA;
-    color: #333;
-    padding: 40px;
-    text-align: center;
-    min-height: 65vh;
-    font-family: 'Jost', sans-serif !important;
+  background-color: #d7cdff;
 
+  color: #333;
+  padding: 40px;
+  text-align: center;
+  min-height: 65vh;
+  font-family: "Jost", sans-serif !important;
 }
-  
+
 .services-title {
-    font-size: 2em;
-    margin-bottom: 10px;
-}
-  
-.services-subtitle {
-    font-size: 1.2em;
-    margin-bottom: 30px;
-}
-  
-.services-container {
-    display: flex;
-    justify-content: center;
-    gap: 40px; 
-    flex-wrap: wrap; 
-}
-  
-.card {
-    font-family: 'Jost', sans-serif; 
-    background-color: white;
-    padding: 20px;
-    border: 2px solid #dcdcdc;
-    border-radius: 8px;
-    width: 350px; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
+  font-size: 2em;
+  margin-bottom: 10px;
 }
 
+.services-subtitle {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+
+.services-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.card {
+  font-family: "Jost", sans-serif;
+  background-color: white;
+  padding: 20px;
+  border: 2px solid #dcdcdc;
+  border-radius: 8px;
+  width: 350px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
 
 /* Estilos Responsivos */
 @media (max-width: 1200px) {
-    .card {
-        width: 280px; 
-    }
+  .card {
+    width: 280px;
+  }
 }
-  
+
 @media (max-width: 768px) {
-    .card {
-        width: 100%; 
-    }
-  
-    .services-container {
-        gap: 20px;
-    }
-  
-    .services-title {
-        font-size: 1.8em;
-    }
-  
-    .services-subtitle {
-        font-size: 1em;
-    }
+  .card {
+    width: 100%;
+  }
+
+  .services-container {
+    gap: 20px;
+  }
+
+  .services-title {
+    font-size: 1.8em;
+  }
+
+  .services-subtitle {
+    font-size: 1em;
+  }
 }
-  
+
 @media (max-width: 480px) {
-    .services-title {
-        font-size: 1.5em;
-    }
-  
-    .services-subtitle {
-        font-size: 0.9em;
-    }
+  .services-title {
+    font-size: 1.5em;
+  }
+
+  .services-subtitle {
+    font-size: 0.9em;
+  }
 }
